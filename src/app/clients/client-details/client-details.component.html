@@ -1,0 +1,7 @@
+<h2>Détails du Client</h2>
+<div>
+  <p>Nom : {{ client.nom }}</p>
+  <p>Prénom : {{ client.prenom }}</p>
+  <p>Date d'Inscription : {{ client.dateInscription | date }}</p>
+  <p>Abonnement Actif : {{ client.abonnementActif ? 'Oui' : 'Non' }}</p>
+</div>

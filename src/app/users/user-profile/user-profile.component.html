@@ -1,0 +1,5 @@
+<h2>Profil Utilisateur</h2>
+<div *ngIf="user">
+  <p>Email : {{ user.email }}</p>
+  <button (click)="logout()">Se déconnecter</button>
+</div>

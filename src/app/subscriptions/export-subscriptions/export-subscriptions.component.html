@@ -1,0 +1,21 @@
+<h2>Exporter les Informations sur les Abonnements</h2>
+<form (ngSubmit)="exportSubscriptions()">
+  <div>
+    <label for="startDate">Date de Début</label>
+    <input type="date" [(ngModel)]="startDate" name="startDate" required />
+  </div>
+  <div>
+    <label for="endDate">Date de Fin</label>
+    <input type="date" [(ngModel)]="endDate" name="endDate" required />
+  </div>
+  <button type="submit">Exporter</button>
+</form>
+<div *ngIf="subscriptions.length">
+  <h3>Résultats de l'exportation</h3>
+  <ul>
+    <li let subscription of subscriptions>
+      Client ID: {{ subscription.clientId }}, Offre ID: {{ subscription.offerId }},
+      Date de Début: {{ subscription.dateDebut | date }}, Date de Fin: {{ subscription.dateFin | date }}
+    </li>
+  </ul>
+</div>

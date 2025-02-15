@@ -1,0 +1,12 @@
+<h2>Ajouter un Nouveau Client</h2>
+<form (ngSubmit)="addClient()">
+  <div>
+    <label for="nom">Nom</label>
+    <input type="text" [(ngModel)]="client.nom" name="nom" required />
+  </div>
+  <div>
+    <label for="prenom">Prénom</label>
+    <input type="text" [(ngModel)]="client.prenom" name="prenom" required />
+  </div>
+  <button type="submit">Ajouter</button>
+</form>

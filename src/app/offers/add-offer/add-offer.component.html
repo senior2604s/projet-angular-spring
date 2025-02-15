@@ -1,0 +1,16 @@
+<h2>Ajouter une Nouvelle Offre</h2>
+<form (ngSubmit)="addOffer()">
+  <div>
+    <label for="nom">Nom de l'offre</label>
+    <input type="text" [(ngModel)]="offer.nom" name="nom" required />
+  </div>
+  <div>
+    <label for="dureeEnMois">Durée (en mois)</label>
+    <input type="number" [(ngModel)]="offer.dureeEnMois" name="dureeEnMois" required />
+  </div>
+  <div>
+    <label for="prixMensuel">Prix Mensuel</label>
+    <input type="number" [(ngModel)]="offer.prixMensuel" name="prixMensuel" required />
+  </div>
+  <button type="submit">Ajouter</button>
+</form>

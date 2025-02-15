@@ -1,0 +1,24 @@
+<h2>Ajouter une Nouvelle Souscription</h2>
+<form (ngSubmit)="addSubscription()">
+  <div>
+    <label for="clientId">Client</label>
+    <select [(ngModel)]="subscription.clientId" name="clientId" required>
+      <option *ngFor="let client of clients" [value]="client.id">{{ client.nom }} {{ client.prenom }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="offerId">Offre</label>
+    <select [(ngModel)]="subscription.offerId" name="offerId" required>
+      <option *ngFor="let offer of offers" [value]="offer.id">{{ offer.nom }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="dateDebut">Date de Début</label>
+    <input type="date" [(ngModel)]="subscription.dateDebut" name="dateDebut" required />
+  </div>
+  <div>
+    <label for="dateFin">Date de Fin</label>
+    <input type="date" [(ngModel)]="subscription.dateFin" name="dateFin" required />
+  </div>
+  <button type="submit">Ajouter</button>
+</form>
